@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static "Home/css/home.css" %}">
+</head>
+<body>
+<form action="" method="post">
+       {% csrf_token %}
+       {{ form }}
+    <button type="submit" class="button2">Choose</button>
+    {% if error %}
+        <p style="color: white">{{ error }}</p>
+    {% endif %}
+    </form>
+
+
+
+{% for i in wea_list %}
+    <div class="widget">
+                <div class="weatherIcon"><img src="http://openweathermap.org/img/wn/{{ i.icon }}@2x.png" alt="avatar"></div>
+                <div class="weatherInfo">
+                    <div class="temperature"><span>{{ i.temp_main }}&deg;</span></div>
+            <div class="description">
+                    <div class="weatherCondition">{{ i.type_weather }}</div>
+            <div class="place">{{ i.city }}</div>
+            </div>
+                </div>
+            <div class="date">{{ i.temp_max }}&deg;/{{ i.temp_min }}&deg;</div>
+
+            <a href="{% url "Home:delete" num=i.id %}" class="button cross"></a>
+            <a href="{% url "Home:update" num=i.id %}" class="button update"></a>
+    </div>
+{% endfor %}
+
+</body>
+</html>

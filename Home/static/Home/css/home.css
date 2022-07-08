@@ -1,0 +1,188 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+ @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+ body {
+	 background-color: #a64253;
+	 font-family: Poiret One;
+}
+ .widget {
+	 float: left;
+	 display: flex;
+	 height: 250px;
+	 width: 450px;
+	 flex-wrap: wrap;
+	 cursor: pointer;
+	 border-radius: 20px;
+	 margin-left: 40px;
+	/* margin-block-start: 30px;*/
+     margin-block-end: 70px;
+}
+ .widget .weatherIcon {
+	 flex: 1 10%;
+	 height: 72%;
+	 border-top-left-radius: 20px;
+	 border-top-right-radius: 20px;
+	 background: #deb6d5;
+	 font-family: weathericons;
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-around;
+	 font-size: 100px;
+}
+ .widget .weatherIcon img {
+	 padding-top: 30px;
+	 height: 200px;
+	 width: 200px;
+}
+ .widget .weatherInfo {
+	 flex: 0 0 70%;
+	 height: 40%;
+	 background: #080705;
+	 border-bottom-left-radius: 20px;
+	 display: flex;
+	 align-items: center;
+	 color: white;
+}
+ .widget .weatherInfo .temperature {
+	 flex: 0 0 40%;
+	 width: 100%;
+	 font-size: 55px;
+	 display: flex;
+	 justify-content: space-around;
+}
+ .widget .weatherInfo .description {
+	 flex: 0 60%;
+	 display: flex;
+	 flex-direction: column;
+	 width: 100%;
+	 height: 100%;
+	 justify-content: center;
+}
+ .widget .weatherInfo .description .weatherCondition {
+	 text-transform: uppercase;
+	 font-size: 32px;
+	 font-weight: 100;
+}
+ .widget .weatherInfo .description .place {
+	 font-size: 15px;
+}
+ .widget .date {
+	 flex: 0 0 30%;
+	 height: 40%;
+	 background: #70c1b3;
+	 border-bottom-right-radius: 20px;
+	 display: flex;
+	 justify-content: space-around;
+	 align-items: center;
+	 color: white;
+	 font-size: 30px;
+	 font-weight: 800;
+}
+ p {
+
+	 bottom: 0%;
+	 right: 2%;
+	 /*transform: translate(600px, -360px);*/;
+	 font-size: 24px;
+	 margin: 0;
+}
+ p a {
+	 text-decoration: none;
+	 color: #e4d6a7;
+	 font-size: 10px;
+}
+.container {
+    border: 2px solid #dedede;
+    background-color: #ffe6ff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.button2 {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    height: 45px;
+	border-radius: 10px;
+}
+label {
+	color: white;
+}
+
+		.button{
+			/*background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+			background-image: linear-gradient(top, #f4f1ee, #fff);
+			border-radius: 50%;
+			box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+			float:left;
+			height: 70px;
+			margin: 0 30px 30px 0;*/
+			position: relative;
+			/*width: 70px;
+			-webkit-transition: all .1s linear;
+			transition: all .1s linear;*/
+		}
+
+		.button:after{
+			color:#e9e6e4;
+			content: "";
+			display: block;
+			font-size: 30px;
+			height: 30px;
+			text-decoration: none;
+			text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+			position: absolute;
+			width: 30px;
+		}
+
+
+
+
+		.cross:after{
+			content: "✖";
+			/*content: "↻";*/
+			left: 30%;
+			top: -195%;
+		}
+		.update:after{
+			content: "↻";
+			left: 30%;
+			top: -155%;
+		}
+
+		.button:hover{
+			background-image: -webkit-linear-gradient(top, #fff, #f4f1ee);
+			background-image: linear-gradient(top, #fff, #f4f1ee);
+			color:#0088cc;
+		}
+
+
+		.cross:hover:after{
+			color:#eb2f2f;
+			text-shadow:0px 0px 6px #eb2f2f;
+		}
+		.update:hover:after{
+			color: #4495f6;
+			text-shadow:0px 0px 6px #4495f6;
+		}
+
+
+
+		.button:active{
+			background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+			background-image: linear-gradient(top, #efedec, #f7f4f4);
+			box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+		}
+
+		.button:active:after{
+			color:#dbd2d2;
+			text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
+		}
